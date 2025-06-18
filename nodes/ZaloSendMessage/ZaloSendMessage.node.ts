@@ -94,6 +94,34 @@ export class ZaloSendMessage implements INodeType {
 				default: {},
 				options: [
 					{
+						displayName: 'Content',
+						name: 'content',
+						type: 'string',
+						default: '',
+						description: 'Nội dung tin nhắn trích dẫn',
+					},
+					{
+						displayName: 'Message Type',
+						name: 'msgType',
+						type: 'string',
+						default: '',
+						description: 'Type của message',
+					},
+					{
+						displayName: 'Proerty Ext',
+						name: 'propertyExt',
+						type: 'collection',
+						default: '',
+						description: 'Proerty Ext',
+					},
+					{
+						displayName: 'UID From',
+						name: 'uidFrom',
+						type: 'string',
+						default: '',
+						description: 'UID From',
+					},
+					{
 						displayName: 'Message ID',
 						name: 'msgId',
 						type: 'string',
@@ -101,18 +129,32 @@ export class ZaloSendMessage implements INodeType {
 						description: 'ID của tin nhắn cần trích dẫn',
 					},
 					{
+						displayName: 'Client Message ID',
+						name: 'cliMsgId',
+						type: 'string',
+						default: '',
+						description: 'Client ID của người gửi tin nhắn trích dẫn',
+					},
+					{
+						displayName: 'Timestamps',
+						name: 'ts',
+						type: 'string',
+						default: '',
+						description: 'Timestamps',
+					},
+					{
+						displayName: 'Time to live',
+						name: 'ttl',
+						type: 'string',
+						default: '',
+						description: 'Time-to-live',
+					},
+					{
 						displayName: 'Sender ID',
 						name: 'senderId',
 						type: 'string',
 						default: '',
 						description: 'ID của người gửi tin nhắn trích dẫn',
-					},
-					{
-						displayName: 'Content',
-						name: 'content',
-						type: 'string',
-						default: '',
-						description: 'Nội dung tin nhắn trích dẫn',
 					},
 				],
 			},
@@ -245,9 +287,14 @@ export class ZaloSendMessage implements INodeType {
 				// Add quote if specified
 				if (quote && Object.keys(quote).length > 0) {
 					messageContent.quote = {
-						msgId: quote.msgId,
-						senderId: quote.senderId,
 						content: quote.content,
+						msgType: quote.msgType,
+						propertyExt: quote.propertyExt,
+						uidFrom: quote.uidFrom,
+						msgId: quote.msgId,
+						cliMsgId: quote.cliMsgId,
+						ts: quote.ts,
+						ttl: quote.ttl,
 					};
 				}
 
