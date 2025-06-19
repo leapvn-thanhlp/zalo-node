@@ -76,10 +76,6 @@
 	"dependencies": {
 		"axios": "^1.8.4",
 		"pnpm": "^10.6.5",
-<<<<<<< HEAD
-		"zca-js": "git+https://github.com/leapvn-thanhlp/zca-js.git#2.0.0-beta.19"
-=======
-		"zca-js": "^2.0.0-beta.24"
->>>>>>> upstream/dev
+		"zca-js": "git+https://github.com/leapvn-thanhlp/zca-js.git#2.0.0-beta.23"
 	}
 }
