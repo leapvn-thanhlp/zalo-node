@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-zalo-tools",
-	"version": "0.5.6",
+	"version": "0.5.10",
 	"description": "Các node hỗ trợ Zalo cho n8n",
 	"keywords": [
 		"n8n-community-node-package",
@@ -51,7 +51,9 @@
 			"dist/nodes/ZaloUser/ZaloUser.node.js",
 			"dist/nodes/ZaloGroup/ZaloGroup.node.js",
 			"dist/nodes/ZaloMessageTrigger/ZaloMessageTrigger.node.js",
-			"dist/nodes/ZaloFriendTrigger/ZaloFriendTrigger.node.js"
+			"dist/nodes/ZaloFriendTrigger/ZaloFriendTrigger.node.js",
+			"dist/nodes/ZaloPoll/ZaloPoll.node.js",
+			"dist/nodes/ZaloTag/ZaloTag.node.js"
 		]
 	},
 	"devDependencies": {
@@ -74,6 +76,10 @@
 	"dependencies": {
 		"axios": "^1.8.4",
 		"pnpm": "^10.6.5",
+<<<<<<< HEAD
 		"zca-js": "git+https://github.com/leapvn-thanhlp/zca-js.git#2.0.0-beta.19"
+=======
+		"zca-js": "^2.0.0-beta.24"
+>>>>>>> upstream/dev
 	}
 }
